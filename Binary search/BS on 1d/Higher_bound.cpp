@@ -34,16 +34,7 @@ int main(){
 }
 
 /*
-
-Plus
-Track
-Command Palette
-Search for a command to run...
-
-Blog
-Discussion
 Implement Upper Bound
-
 
 7
 
