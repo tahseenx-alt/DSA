@@ -1,0 +1,33 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int rotated_array(vector<int> arr, int n, int target)
+{
+    int low = 0, high = n - 1;
+    int ans = -1;
+    while (low <= high)
+    {
+        int mid = (low + high) / 2;
+        if (arr[mid] == target)
+        {
+            ans = mid;
+        }
+    }
+}
+int main()
+{
+    int n;
+    cin >> n;
+    vector<int> arr;
+    for (int i = 0; i < n; i++)
+    {
+        int x;
+        cin >> x;
+        arr.push_back(x);
+    }
+    int target;
+    cin >> target;
+    int ans = rotated_array(arr, n, target);
+    cout << ans;
+    return 0;
+}
