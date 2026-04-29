@@ -10,7 +10,8 @@ int main(){
         cin>>x;
         arr.push_back(x);
     }
-
+    
+    
     int max= arr[0];
     for(int i=1; i<n; i++){
         if(max<arr[i+1]){
