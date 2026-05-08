@@ -42,17 +42,9 @@ int main(){
     int count = 0;
     string ans ="";
     for(int i = 0; i < a.length(); i++){
-        if(a[i] == '(') {
-            // If count > 0, this '(' is not an outermost bracket
-            if(count > 0) ans.push_back(a[i]);
-            count++;
-        } else {
-            // Decrement first to check if it's the outermost closing bracket
-            count--;
-            // If count > 0, this ')' is not an outermost bracket
-            if(count > 0) ans.push_back(a[i]);
-        }
+       if(a[i] == ')') count--;
+       if(count!=0) ans = ans+a[i];
+       if(a[i]=='(')count++;
     }
-
     cout<<ans;
 }
