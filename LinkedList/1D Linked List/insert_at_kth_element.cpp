@@ -33,11 +33,42 @@ void print(Node * head){
         head = head->next;
     }
 }
+
+Node * insertPosition(Node * head ,int post, int value){
+    if(head == NULL){
+        if(post==1){
+            return new Node(value);
+        }
+        else{
+            return head;
+        }
+    }
+    if(post==1){
+        return new Node(value,head);
+    }
+    int cnt = 0;
+    Node * temp = head;
+    while(temp!= NULL){
+        cnt++;
+        if(cnt == (post-1)){
+            Node * x = new Node(value,temp->next);
+            temp->next=x;
+            break;
+        }
+        temp = temp->next;
+    }
+    return head;
+}
 int main(){
 
     vector<int>arr = {5,6,1,3,2};
     Node* head = convert(arr);
-    int k;
-    cin>>k;
+    int post;
+    cin>>post;
+    int value;
+    cin>>value;
+     
+    head = insertPosition(head,post,value);
+    print(head);
     return 0;
 }
