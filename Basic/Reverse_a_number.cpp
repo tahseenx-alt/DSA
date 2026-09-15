@@ -3,7 +3,7 @@ using namespace std;
 int reverse_a_number(int n){
     int number;
     int revnumber=0;
-    while(n>0){
+    while(n != 0){
         number = n%10;
         revnumber = revnumber*10+number;
         n = n/10;
