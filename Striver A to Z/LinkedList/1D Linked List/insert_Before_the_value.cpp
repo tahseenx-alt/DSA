@@ -1,5 +1,6 @@
 #include<iostream>
 #include <vector>
+
 using namespace std;
 class Node{
     public:
@@ -25,6 +26,7 @@ Node * convert(vector<int>&arr){
     }
     return head;
 }
+
 
 
 void print(Node * head){
@@ -56,7 +58,6 @@ int main(){
 
     vector<int>arr = {5,6,1,3,2};
     Node* head = convert(arr);
-
     int value;
     cin>>value;
     int ele;
