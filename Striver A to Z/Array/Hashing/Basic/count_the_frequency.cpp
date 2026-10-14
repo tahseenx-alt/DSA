@@ -12,6 +12,7 @@ int main(){
     }
     for(auto pair:mp){
         cout<<pair.first<<"=>"<<pair.second<<endl;
+        //cout<<pair.second<<endl;
     }
     return 0;
 }
