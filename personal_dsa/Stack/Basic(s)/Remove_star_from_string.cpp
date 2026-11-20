@@ -19,6 +19,7 @@ int main(){
             st.push(s[i]);
         }
     }
+    
     string ans;
     while(!st.empty()){
         ans += st.top();
